@@ -1,0 +1,9 @@
+development:
+ adapter: postgresql
+ host: localhost
+ encoding: utf8
+ reconnect: false
+ database: heroku_dev
+ pool: 5
+ username: postgres
+ password: postgres
