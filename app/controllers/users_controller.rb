@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  	
+
   end
 
   def edit
@@ -37,10 +37,12 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-    @user = User.find(params[:id])
+   def destroy
     @user.destroy
-    redirect_to user_path
+    respond_to do |format|
+      format.html { redirect_to uses_url, notice: 'Use was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
